@@ -53,20 +53,6 @@ module Dumbf
       puts "starting"
       word_list.each do |v|
         v = v.to_s
-        if fork > @buff_fork
-          puts "forking"
-          @buff_fork += 1
-          pid = Process.fork do
-            puts
-            post = client.post(url, form: {username_name => username_value, password_name => v})
-            if post.success?
-              puts "Password Found : #{v}"
-              exit 0
-            end
-          end
-          sleep 1500.milliseconds
-        end
-        puts "sending"
         post = client.post(url, form: {username_name => username_value, password_name => v})
         if post.success?
           puts "Password Found : #{v}"
