@@ -1,0 +1,17 @@
+name: dumbf
+version: 0.1.0
+
+authors:
+  - Rubi Jihantoro <jihantoro8@gmail.com>
+
+dependencies:
+  halite:
+    github: icyleaf/halite
+
+targets:
+  dumbf:
+    main: src/dumbf.cr
+
+crystal: 0.24.2
+
+license: MIT

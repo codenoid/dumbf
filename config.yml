@@ -1,0 +1,9 @@
+form:
+  username: username # input[name], the name of input
+  password: password
+
+value:
+  username: hazaharede
+
+url: http://kucingterbang.com
+list: ./wordlist.txt
